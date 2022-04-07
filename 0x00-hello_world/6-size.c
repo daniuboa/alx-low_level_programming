@@ -1,22 +1,24 @@
 #include <stdio.h>
 
 /**
-* main -This function prints the sizes of different types
-* Return: This function returns 0
+* main - Entry point
+*
+* Return: Returns 0
 */
+
 int main(void)
 {
-	char c;
-	int i;
-	long li;
-	long long lli;
-	float f;
+	char acharacter;
+	int ainteger;
+	long along;
+	long long alonglong;
+	float afloat;
 
-	printf("Size of a char: %lu byte(s)\n", sizeof(c));
-	print("Size of an int: %lu byted(s)\n", sizeof(i));
-	print("Size of a long int: %lu byte(s)\n", sizeof(li));
-	print("Size of a long long int: %lu byte(s)\n", sizeof(lli));
-	print("Size of a float: %lu byte(s)\n", sizeof(f));
+	printf("size of a char: %lu byte(s)\n", sizeof(acharacter));
+	printf("Size of an int: %lu byte(s)\n", sizeof(ainteger));
+	printf("Size of a ling int: %lu byte(s)\n", sizeof(along));
+	print("Size of a long long int: %lu byte(s)\n", sizeof(alonglong));
+	printf("Size of a float: %lu byte(s)\n", sizeof(afloat));
 
 	return (0);
 }
