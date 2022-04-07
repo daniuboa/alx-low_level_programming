@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/**
+/*
  * main - prnts the strng in the put function
  *
  * Description: Using the main function
