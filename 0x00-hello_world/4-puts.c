@@ -4,7 +4,7 @@
  * main - prnts the strng in the put function
  *
  * Description: Using the main function
- * this program prints "Programming is like building a multilingual puzzle"
+ * this program prints "Programming is like building a multilingual puzzle
  * return: 0
  */
 
