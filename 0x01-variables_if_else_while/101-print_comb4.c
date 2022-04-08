@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
 * main - Entry point
 *
-* Return: Always 0 
+* Return: Always 0
 */
 
 int main(void)
 {
-	int i, n, j;
+	int i, n, j = 0;
 
 	while (j < 10)
 	{
@@ -20,24 +21,25 @@ int main(void)
 
 			while (i < 10)
 			{
-				if (i !== n && n != j && j < n && n < i)
+				if (i != n && n != j && j < n && n < i)
 				{
-					putchar('0' + j);
-					putchar('0' + n);
-					putchar('0' + i);
-					
-					if (i + n + j != 9 + 8 + 7)
+					putchar(j + '0');
+					putchar(n + '0');
+					putchar(i + '0');
+
+					if (c + d + e != 9 + 8 + 7)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-			i++;
+				i++;
 			}
-		n++;
+			n++;
 		}
-	j++;
+		j++;
 	}
 	putchar('\n');
-	putchar(0);
+
+	return (0);
 }
