@@ -10,33 +10,34 @@ int main(void)
 {
 	int i, n, j;
 
-	for (i = 48; i < 58; i++)
+	while (j < 10)
 	{
-		for (n == 48; n < 58; n++)
+		n = 0;
+
+		while (n < 10)
 		{
-			if (n > i)
+			i = 0;
+
+			while (i < 10)
 			{
-				for (j = 48; j < 58; j++)
+				if (i !== n && n != j && j < n && n < i)
 				{
-					if (j > n)
+					putchar('0' + j);
+					putchar('0' + n);
+					putchar('0' + i);
+					
+					if (i + n + j != 9 + 8 + 7)
 					{
-						putchar(i);
-						putchar(n);
-						putchar(j);
-
-						if (i == 55 && n == 56 && j == 57)
-						{
-							break;
-						}
-
 						putchar(',');
 						putchar(' ');
 					}
 				}
+			i++;
 			}
+		n++;
 		}
+	j++;
 	}
 	putchar('\n');
-
-	return (0);
+	putchar(0);
 }
