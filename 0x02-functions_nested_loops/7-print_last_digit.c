@@ -20,6 +20,6 @@ int prnt_last_digit(int n)
 	else
 	{
 		last_digit = (n % 10);
-		_puichar(last_digit);
+		_putchar(last_digit);
 	}
 }
