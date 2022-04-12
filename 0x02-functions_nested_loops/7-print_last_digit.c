@@ -1,26 +1,22 @@
 #include "main.h"
 
 /**
-* print_lastdigit - last digit
-*
-* @n: The int to print
+* print_last_digit - function that computes the absolute valueof an integer
+* @c: is the int that will use for the argument of the function
 * Return: 0
 */
 
-int prnt_last_digit(int n)
+int print_last_digit(int c)
 {
-	int last_digit;
-
-	if (n < 0)
+	if (c > 0 || c == 0)
 	{
-		last_digit = (-1 * (n % 10));
-		_putchar(last_digit + '0');
-		return (last_digit);
+		_putchar(c % 10 + '0');
+		return (c % 10);
 	}
 	else
 	{
-		last_digit = (n % 10);
-		_putchar(last_digit + '0');
-		return(last_digit);
+		c = c * -1;
+		_putchar(c % 10 + '0');
+		return (c % 10);
 	}
 }
