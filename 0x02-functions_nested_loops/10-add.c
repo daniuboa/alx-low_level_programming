@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /**
-* add - sums two integers and 
-* return the results.
+* add - sums two integers and return the results.
 *
 * @num1: integer one.
 * @num2: integer two.
