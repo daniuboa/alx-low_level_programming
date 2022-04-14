@@ -6,7 +6,7 @@
 * @a: Prints the numbers 10 times
 * @b: Prints the numbers from 0 to 14
 *
-* Return: 0
+* Return: void
 */
 
 void more_numbers(void)
