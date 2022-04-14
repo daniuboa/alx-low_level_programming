@@ -3,6 +3,8 @@
 /**
  * print_square - Prints n square according n number of times
  *
+ * @size: size of the square
+ *
  * Return: void
  */
 
