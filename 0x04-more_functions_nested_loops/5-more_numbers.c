@@ -1,13 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* more_numbers - prints the numbers 0 to 14 ten times
-*
-* @a: Prints the numbers 10 times
-* @b: Prints the numbers from 0 to 14
-*
-* Return: void
-*/
+ * more_numbers - Print numbers between 0 to 14
+ *
+ * Return: void
+ */
 
 void more_numbers(void)
 {
@@ -23,6 +21,6 @@ void more_numbers(void)
 			}
 			_putchar((b % 10) + '0');
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
