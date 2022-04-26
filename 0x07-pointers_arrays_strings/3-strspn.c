@@ -29,7 +29,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		/* Check if there is no string accept to loop through */
-		if (!*(accept + j))
+		if (! *(accept + j))
 			break;
 	}
 	/* Return the length where the first character appears */
