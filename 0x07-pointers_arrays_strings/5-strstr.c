@@ -1,37 +1,45 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strstr - Function locate
+ * compare - Function that compares two strings.
  *
- * @haystack:Pointer to char
- * @needle: Pointer to char
+ * @haystack: Pointer to the first null-terminated byte string
+ * @needle: Pointer to the second null-terminated byte string.
  *
- * Return: 0
+ * Return: True if haystack and needle are the same.
+ */
+
+int compare(char *haystack, char *needle)
+{
+	while (*haystack && *needle)
+	{
+		if (*haystack != *needle)
+			return (0);
+
+		haystack++;
+		needle++;
+	}
+
+	return (*needle == '\0');
+}
+
+/**
+ * _strstr - Function that locates a substring.
+ *
+ * @haystack: Pointer to the null-terminated byte string to examine.
+ * @needle: Pointer to the null-terminated byte string to be searched.
+ *
+ * Return: A pointer to the beginning of the located substring, or NULL
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int index;
-
-	if (*needle == 0)
+	while (*haystack != '\0')
 	{
-		return (haystack);
-	}
-
-	while (*haystack)
-	{
-		index = 0;
-
-		if (haystack[index] == needle[index])
+		if ((*haystack == *needle) && compare(haystack, needle))
 		{
-			do
-			{
-				if (needle[index + 1] == '\0')
-					return (haystack);
-
-				index++;
-			}
-			while (haystack[index] == needle[index]);
+			return (haystack);
 		}
 
 		haystack++;
