@@ -19,8 +19,9 @@ void print_diagsums(int *a, int size)
 	{
 		sum += *(a + ((size * m) + m));
 	}
+
 	sum1 = 0;
-	
+
 	for (m = 1; m <= size; m++)
 	{
 		sum1 += *(a + ((size * m) - m));
