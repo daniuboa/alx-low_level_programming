@@ -32,7 +32,7 @@ int _sqrt_recursion(int n)
  * helper - blank
  * @n: number
  * @i: incrementor
- * 
+ *
  * Return: -1
  */
 
