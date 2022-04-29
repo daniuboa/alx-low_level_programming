@@ -5,7 +5,6 @@ int helper(int n, int i);
 /**
  * _sqrt_recursion - Function that returns the natural square root of a numer.
  * @n: Number to be used.
- * 
  * Return: 0
  */
 
@@ -34,7 +33,7 @@ int _sqrt_recursion(int n)
  * @n: number
  * @i: incrementor
  * 
- * Return: -1.
+ * Return: -1
  */
 
 int helper(int n, int i)
