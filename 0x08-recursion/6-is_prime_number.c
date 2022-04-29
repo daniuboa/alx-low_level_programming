@@ -35,4 +35,4 @@ int helper_prime(int n, int i, int limit)
 	{
 		return (1);
 	}
-
+}
