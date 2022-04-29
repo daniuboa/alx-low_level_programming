@@ -5,7 +5,7 @@
  * @s1: Pointer to string parameter
  * @s2: Pointer to string parameter
  *
- * Returm: 0
+ * Return: 0
  */
 
 int wildcmp(char *s1, char *s2)
