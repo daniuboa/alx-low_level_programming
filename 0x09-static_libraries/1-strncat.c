@@ -12,7 +12,7 @@
  * Return: Pointer to dest.
  */
 
-char *_strncat(char *dest, char 8src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	return (strncat(dest, src, n));
 }
