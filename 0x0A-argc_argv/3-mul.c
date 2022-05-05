@@ -3,9 +3,8 @@
 #include "main.h"
 
 /**
- * main - program that adds two numbers.
- *
- * @args: Number of arguments passed to the function.
+ * main - Program that adds two numbers.
+ * @argc: number of arguments passed to the function.
  * @argv: argument vector of pointers to strings.
  *
  * Return: 0 (Success) or 1 (Error)
