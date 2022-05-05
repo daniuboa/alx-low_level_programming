@@ -4,17 +4,19 @@
 #include "main.h"
 
 /**
- * main - prints theminimum number of coins to make change for an amount of money.
+ * main - program that prints the minimum number of coins to
+ * make change for an amount of money.
  * @argc: number of arguments passed to the function.
  * @argv: argument vector of pointers to strings.
  *
- * Usage: ./change cents where cents is the amount of you need to give back.
- * if the number of arguments passed is not exactly 1,
- * print Error, followed by a new line, and return 1.
- * you should use atoi to parse the parameter passed to your program
- * If the number passed as the argument is negative, print 0,
+ * Usage: ./change cents where cents is the amount of cents you
+ * need to give back.
+ * if the number of arguments passed to your program is not
+ * exactly 1, print Error, followed by a new line, and return 1.
+ * you should use atoi to parse the parameter passed to your program.
+ * if the number passed as the argument is negative, prnt 0,
  * followed by a new line.
- * You can use an unlimited number of coints of values 25, 10, 5, 2,
+ * You can use an unlimited number of coins of values 25, 10, 5, 2,
  * and 1 cent.
  *
  * Return: 0 (Success)
@@ -45,6 +47,7 @@ int main(int argc, char *argv[])
 			cents -= 2;
 		else if (cents >= 1)
 			cents -= 1;
+
 		coins_num += 1;
 	}
 
