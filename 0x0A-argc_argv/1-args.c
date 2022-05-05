@@ -1,20 +1,18 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints its name, followed by a new line
+ * main - Program that prints thenumber of args passed to it.
  *
- * @argc: n args
- * @argv: array args
+ * @argc: Number of arguments passed to the function.
+ * @argv: Argument vector of pointers to strings.
  *
  * Return: 0
  */
 
-int main(int argc, char *argv[] __attribute__((unused)))
+int main(int argc, char *argv[]__attribute__((unused)))
 {
-	if (argc > 0)
-	{
-		printf("%d\n", argc -1);
-	}
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
