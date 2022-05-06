@@ -1,92 +1,84 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * ch_free_grid - frees a 2 dimensional array.
- *
- * @grid: Multidimensional array of char.
- * @height: Height of the array.
- *
- * Return: Void
- */
-
-void ch_free_grid(char **grid, unsigned int height)
-{
-	if (grid != NULL && height != 0)
-	{
-		for (; height > 0; height--)
-		{
-			free(grid[height]);
-		}
-		free(grid[height]);
-		free(grid);
-	}
-}
-
-/**
- * strtow - Function that splits a string into words.
- *
- * @str: Pointer to the string to split.
- *
- * Return: NULL (failure) or pointer to an array of strings
+ * strtow - char
+ * @str: pointer to string params
+ * Return: char
  */
 
 char **strtow(char *str)
 {
-	char **array;
-	unsigned int c, height, i, j, a1;
+	int i = 0, j = 0, k = 0;
+	int len = 0, count = 0;
+	char **f, *col;
 
-	if (str == NULL || *str == '\0')
+	if (!str || !*str)
 	{
 		return (NULL);
 	}
 
-	for (c = height = 0; str[c] != '\0'; c++)
+	while (*(str + i))
 	{
-		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+		if (*(str + i) != ' ')
 		{
-			height++;
+			if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
+			{
+				count += 1;
+			}
 		}
+		i++;
 	}
 
-	array = malloc((height + 1) * sizeof(char * ));
-
-	if (array == NULL || height == 0)
+	if (count == 0)
 	{
-		free(array);
 		return (NULL);
 	}
+	count += 1;
+	f = malloc(sizeof(char *) * count);
 
-	for (i = a1 = 0; i < height; i++)
+	if (!f)
 	{
-		for (c = a1; str[c] != '\0'; c++)
-		{
-			if (str[c] == ' ')
-			{
-				a1++;
-			}
-
-			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
-			{
-				array[i] = malloc((c - a1 + 2) * sizeof(char));
-
-				if (array[i] == NULL)
-				{
-					ch_free_grid(array, i);
-					return (NULL);
-				}
-				break;
-			}
-		}
-
-		for (j = 0; a1 <=  c; a1++, j++)
-		{
-			array[i][j] = str[a1];
-		}
-
-		array[i][j] = '\0';
+		return (NULL);
 	}
-	array[i] = NULL;
-	return (array);
-}
+	i = 0;
+
+	while (*str)
+	{
+		while (*str == ' ' && *str)
+		{
+			str++;
+		}
+		len = 0;
+
+		while (*(str + len) != ' ' && *(str + len))
+		{
+			len += 1;
+		}
+		len += 1;
+		col = malloc(sizeof(char) * len);
+
+		if (!col)
+		{
+			for (k = j - 1; k >= 0; k--)
+			{
+				free(f[k]);
+			}
+			free(f);
+			return (NULL);
+		}
+
+		for (k = 0; k < (len - 1);  k++)
+		{
+			*(col + k) = *(str++);
+		}
+		*(col + k) = '\0';
+		*(f + j) = col;
+
+		if (j < (count - 1))
+		{
+			j++;
+		}
+	}
+	*(f + j) = NULL;
+	return (f);
+} 
