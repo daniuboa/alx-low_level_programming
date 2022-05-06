@@ -14,30 +14,44 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *my_array;
-	int a, b, c;
+	unsigned int s1_length = 0;
+	unsigned int s2_length = 0;
+	char *alloc_mem;
+	unsigned int i, j;
 
-	c =0;
-	my_array = malloc(sizeof(*s1 + *s2));
-
-	if (my_array == NULL)
-		return (NULL);
-
-	a = 0;
-	while (s1[a] != '\0')
+	if (s1 == NULL)
 	{
-		my_array[c] = s1[a];
-		a++;
-		c++;
+		s1 = "";
 	}
-	b = 0;
-	while (s2[b] != '\0')
+	if (s2 == NULL)
 	{
-		my_array[c] = s2[b];
-		b++;
-		c++;
+		s2 = "";
 	}
 
-	return (my_array);
-	free(my_array);
+	while (*(s1 + s1_length) != '\0')
+	{
+		s1_length++;
+	}
+	while (*(s2 + s2_length) != '\0')
+	{
+		s2_length++;
+	}
+
+	alloc_mem = malloc(1 + (s1_length * sizeof(*s1)) + (s2_length * sizeof(*s2)));
+
+	if (alloc_mem == NULL)
+	{
+		return ('\0');
+	}
+
+	for (i = 0; i < s1_length; i++)
+	{
+		alloc_mem[i] = *(s1 + i);
+	}
+	for (j = 0; j < s2_length; j++, i++)
+	{
+		alloc_mem[i] = *(s2 + j);
+	}
+
+	return (alloc_mem);
 }
