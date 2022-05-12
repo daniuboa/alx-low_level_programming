@@ -4,10 +4,8 @@
 
 /**
  * print_dog - Prints a struct dog.
- *
  * @d: The struct dog to be printed.
  */
-
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
@@ -26,5 +24,5 @@ void print_dog(struct dog *d)
 	if (d->owner == NULL)
 		printf("Owner: (nil)\n");
 	else
-		printf("Pwner: %s\n", d->owner);
+		printf("Owner: %s\n", d->owner);
 }
