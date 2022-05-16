@@ -5,6 +5,7 @@
  * main - Prints the opcodes of this function
  *
  * @argc: The number of command-line arguments
+ *
  * @argv: The command-line arguments
  *
  * Return: 0 if successful
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
 			exit(2);
 		}
 		for (i = 0; i < n_bytes; i++)
-			print("%02x%c",
+			printf("%02x%c",
 					(unsigned char)*((char *)prog + i), i < n_bytes - 1 ? ' ' : '\n');
 	}
 	else
@@ -34,4 +35,5 @@ int main(int argc, char *argv[])
 	}
 
 	return (0);
+
 }
