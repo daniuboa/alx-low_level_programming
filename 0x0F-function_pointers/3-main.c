@@ -21,21 +21,21 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if argv[2][1] != '\0')
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	funct_ptr = get_op_func(argv[2]);
+	func_ptr = get_op_func(argv[2]);
 
-	if (funct_ptr == NULL)
+	if (func_ptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", func_ptr(atoi(argv[1], atoi(argv[3]))));
+	printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
 }
