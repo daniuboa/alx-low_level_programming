@@ -44,7 +44,7 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
- * int op_div - Divides @a by @b
+ * op_div - Divides @a by @b
  *
  * @a: A number
  * @b: A number
