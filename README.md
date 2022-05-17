@@ -21,3 +21,7 @@ All of the followng folders are projects done during the studies.
 - [`0x06-pointers_arrays_strings`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x06-pointers_arrays_strings)
 - [`0x07-pointers_arrays_strings`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings)
 - [`0x08-recursion`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x08-recursion)
+- [`0x09-static_libraries`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x09-static_libraries)
+- [`0x0X-argc_argv`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x0A-argc_argv)
+- [`0x0B-malloc_free`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x0B-malloc_free)
+- [`0xC-more_malloc_free`](https://github.com/daniuboa/alx-low_level_programming/tree/master/0x0C-more_malloc_free)
