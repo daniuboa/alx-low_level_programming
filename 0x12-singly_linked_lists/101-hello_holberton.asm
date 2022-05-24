@@ -7,7 +7,7 @@ section .text
   global main
 
 main:
-  push rdp
+  push rbp
   
   mov rdi,fmt
   mov rsi,msg
