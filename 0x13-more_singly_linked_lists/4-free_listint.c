@@ -6,7 +6,7 @@
  * @head: A pointer to the head of the listint_ list to be frred.
  */
 
-void free_listint(listint_ *head)
+void free_listint(listint_t *head)
 {
 	listint_t *tmp;
 
