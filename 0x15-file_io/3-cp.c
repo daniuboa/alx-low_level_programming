@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * create_buffer - Allocates 1024 bytes for buffer.
@@ -34,7 +36,7 @@ char *create_buffer(char *file)
 
 void close_file(int file_descriptor)
 {
-	int close;
+	int cclose;
 
 	cclose = close(file_descriptor);
 
@@ -93,7 +95,7 @@ int main(int argc, char *argv[])
 
 		rread = read(file_from, buffer, 1024);
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
-	} while (read > 0);
+	} while (rread > 0);
 
 	free(buffer);
 	close_file(file_from);
