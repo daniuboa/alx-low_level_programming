@@ -73,17 +73,16 @@ int main(int argc, char *argv[])
 
 	rread = read(file_from, buffer, 1024);
 
-	file_to = open(argv[2], O_CREAT | O_WRONLY |O_TRUNC, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (file_from == -1 || rread ==-1)
+		if (file_from == -1 || rread == -1)
 		{
 			dprintf(STDERR_FILENO,
 					"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
-
 		wwrite = write(file_to, buffer, rread);
 		if (file_to == -1 || wwrite == -1)
 		{
@@ -92,14 +91,11 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(99);
 		}
-
 		rread = read(file_from, buffer, 1024);
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (rread > 0);
-
 	free(buffer);
 	close_file(file_from);
 	close_file(file_to);
-
 	return (0);
 }
