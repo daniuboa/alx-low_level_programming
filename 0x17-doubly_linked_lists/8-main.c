@@ -48,7 +48,7 @@ int main(void)
         printf("-----------------\n");
         delete_dnodeint_at_index(&head, 0);
         printf("-----------------\n");
-        elete_dnodeint_at_index(&head, 0);
+        delete_dnodeint_at_index(&head, 0);
         printf("-----------------\n");
         delete_dnodeint_at_index(&head, 0);
         printf("-----------------\n");
